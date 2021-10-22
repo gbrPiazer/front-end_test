@@ -1,0 +1,597 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+#container{
+    width: 100vw;
+    height: 100vh;
+    max-width: 1000px;
+}
+/*nav bar*/
+nav.mobile{
+    position: fixed;
+    width: 100%;
+	height: 100%;
+	z-index: 100;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    top: 0;
+}
+navbar nav.mobile a{
+    color: black;
+    text-decoration: none;
+}
+navbar nav.mobile li{
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+navbar nav.mobile ul{
+    padding: 10px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    list-style-type: none;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 9999;
+    width: 70%;
+    height: 100%;
+    background: white;
+}
+navbar nav.mobile i{
+    display: block;
+    float: right;
+}
+
+navbar nav.desktop{
+    display: none;
+    background: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+navbar nav.desktop ul{
+    display: none;
+    flex-wrap: wrap;
+    
+}
+navbar nav.desktop ul li{
+    list-style-type: none;
+    padding: 30px;
+    border-right: 1px solid white;
+    
+}
+navbar nav.desktop a,li.here {
+    font-weight: 300;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+navbar nav.desktop ol{
+    background: white;
+    position: absolute;
+    display: none;
+    margin-top: 30px;
+    border: 2px solid #BDBDBD;
+}
+navbar nav.desktop ol li{
+
+    font-size: 2rem;
+    color: #4F4F4F;
+    text-align: center;
+    line-height: 1rem;
+    height: 46px;
+    border-bottom: 1px solid #E0E0E0;
+}
+/* HEADER */
+
+header{
+    z-index: 2;
+    width: 100%;
+    padding: 1.6rem 1rem;  
+}
+
+header div.content_1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 6.2rem;
+    width: 100%;
+    vertical-align: middle;
+    margin-left: -20px;
+}
+header div.content_1 icons{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+}
+header div.content_1 img{
+    height: 9rem;
+    width: 16rem;
+}
+header div.content_1 i{
+    font-size: 1.8em;
+    color: #4F4F4F;
+    line-height:  2.4rem;
+}
+header div.content_1 div.carrinho{
+    position: relative;
+    display: inline;
+    background: #4F4F4F;
+    color: white;
+    font-size: 1rem;
+    padding: 3px;
+    border-radius: 2px;
+}
+header div.content_1 div.carrinho:after{
+    right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(79, 79, 79, 0);
+	border-right-color: #4F4F4F;
+	border-width: 8px;
+	margin-top: -8px;
+}
+
+header div.content_2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 9em;
+}
+header div.content_2 input{
+    font-size: 1.4rem;
+    font-weight: 300;
+    width: 22rem;
+    height: 2.7rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    border: 1px solid #4F4F4F;
+    float: left;
+    vertical-align: middle;
+}
+header div.content_2 button{
+    height: 2.7rem;
+    width: 4rem;
+    border: 1px solid #4F4F4F;
+    background: #4F4F4F;
+    color: white;
+    float: left;
+}
+
+/*Full Banner*/
+section#full-banner{
+    width: 100vw;
+    height: 320px;
+    background: #E5E5E5;
+    margin-bottom: 2rem;
+}
+section#full-banner h1{
+    position: relative;
+    top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/*Produtos*/
+section#produtos div.vendidos{
+    display: flex;
+    margin: 10px;
+    text-transform: uppercase;
+    color: #4F4F4F;
+    font-size: 1.6rem;
+}
+section#produtos div.vendidos::after{
+    content: "";
+    width: 13rem;
+    height: 1px;
+    color: #4F4F4F;
+    background: #4F4F4F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+section#produtos div.produto-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+section#produtos div.produto-single{
+    display: block;
+    border: 1px solid black;
+    width: 45%;
+    margin: 10px;
+    padding: 10px;
+}
+section#produtos div.produto-single span{
+    max-width: 125px;
+    display: block;
+    font-size: .8rem;
+    font-weight: 300;
+    background: #27AE60;
+    padding-left: 0;
+    color: white;
+    text-transform: uppercase;
+    padding: 6px;
+    padding-left: 10px;
+    margin-left: -10px;
+}
+section#produtos div.produto-single img{
+    width: 8rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section#produtos div.produto-single h3{
+    font-size: 1rem;
+}
+section#produtos div.produto-single h3:nth-of-type(2){
+    margin-bottom: 10px;
+}
+section#produtos div.produto-single p{
+    margin-bottom: 10px;
+    font-size: .9rem;
+}
+section#produtos div.produto-single label{
+    color: #F2994A;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 5px;
+}
+section#produtos div.produto-single button{
+    border: 0;
+    background: #27AE60;
+    color: white;
+    padding: 3px;
+    width: 12.5rem;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+/*Banners*/
+
+section#banners{
+    width: 100vw;
+}
+section#banners div.banner-container{
+    width: 100%;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 18rem 10rem 8rem 12rem;
+    grid-template-areas:
+      "banner1 banner1"
+      "banner2 banner2"
+      "banner3 banner4"
+      "banner5 banner6";
+}
+
+section#banners div.banner-single:nth-child(1){
+    grid-area: banner1;
+}
+section#banners div.banner-single:nth-child(2){
+    grid-area: banner2;
+}
+section#banners div.banner-single:nth-child(3){
+    grid-area: banner3;
+}
+section#banners div.banner-single:nth-child(4){
+    grid-area: banner4;
+}
+section#banners div.banner-single:nth-child(5){
+    grid-area: banner5;
+}
+section#banners div.banner-single:nth-child(6){
+    grid-area: banner6;
+}
+
+section#banners div.banner-single{
+    margin: 8px;
+    background: #E5E5E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section#banners div.banner-single h1{
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+/*Newsletter*/
+
+.news-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: #333333;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.news-container form{
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.news-container h2{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.news-container input[type=text]{
+    display: block;
+    width: 80vw;
+    font-size: 18px;
+    padding: 5px;
+    padding-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.news-container input[type=submit]{
+    display: block;
+    width: 10rem;
+    padding: 10px;
+    background: #333333;
+    color: white;
+    border: 1px solid white;
+    margin-bottom: 10px;
+}
+
+/* Info */
+
+footer{
+    width: 100vw;
+}
+footer h1{
+    text-transform: uppercase;
+    text-align: center;
+}
+footer a{
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+}
+footer hr{
+    width: 100%;
+    border: 0.5px solid #E5E5E5;
+}
+footer hr.off{
+    display: block;
+}
+footer hr.on{
+    display: none;
+}
+.formas-pagamento{
+    display: block;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.formas-pagamento div.cards{
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+.formas-pagamento div.cards img{
+    width: 5rem;
+    padding: 1rem;
+    vertical-align: middle;
+}
+.formas-pagamento .fileira2, .fileira1{
+    display: block;
+}
+
+.atendimento{
+    padding: 10px;
+    width: 100%;
+    display: block;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.atendimento .contato{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.link-container{
+    padding: 10px;
+    width: 100%;
+    display: block;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.links{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.servicos-container{
+    display: block;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.servico{
+    align-self: center;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
+}
+@media (min-width: 541){
+    section#produtos div.produto-single span{
+        position: absolute;
+        margin-top: -20px;            
+    }
+    section#produtos div.produto-single button{
+        width: 8rem;
+    }
+}
+@media (min-width: 800){
+    section#produtos div.produto-single button{
+        width: 10rem;
+    }
+}
+@media (min-width: 1030px){
+        #container{
+            max-width: 100vw;
+        }
+        header{
+            width: 100%;
+        }
+        header div.content_1{
+            justify-content: space-between;
+        }
+        header div.content_1 .carrinho{
+            margin-bottom: 10px;
+        }
+        header div.content_1 i:nth-last-of-type(1){
+            display: none;
+        }
+        header div.content_2{
+            margin-top: -72px;   
+        }
+        header div.content_2 input{
+            width: 20em;
+        }
+
+        section#full-banner{
+            width: 100vw;
+            margin-left: 0;
+        }
+
+        section#produtos div.produto-single img{
+            width: 10rem;
+        }
+        section#produtos div.produto-container{
+            align-items: center;
+            justify-content: center;
+        }
+        section#produtos div.produto-single{
+            cursor: pointer;
+        }
+        section#produtos div.produto-single span{
+            display: none;
+            position: absolute;
+        }
+       
+       
+        section#produtos div.produto-single{
+            width: 20%;
+        }
+        section#produtos div.vendidos::after{
+            width: 80%;
+        }
+        section#produtos div.produto-single button{
+            width: 10rem;
+        }
+
+        section#banners div.banner-container{
+            width: 100%;
+            padding: 8px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 250px 130px;
+            grid-template-areas:
+              "banner1 banner2 banner2 banner3"
+              "banner1 banner4 banner5 banner6";
+        }
+
+        .news-container input{
+            height: 46px;
+        }
+        .news-container input[type=text]{
+            display: block;
+            width: 30rem;
+            font-size: 18px;
+            padding: 5px;
+            padding-left: 10px;
+            margin-left: 20px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            border: 1px solid white;
+        }
+        .news-container input[type=submit]{
+            display: block;
+            width: 10rem;
+            padding: 10px;
+            background: #333333;
+            color: white;
+            border: 1px solid white;
+            margin-bottom: 10px;
+            
+        }
+
+        footer{
+            height: 45vh;
+        }
+        footer hr.on{
+            display: block;
+        }
+        footer hr.off{
+            display: none;
+        }
+        footer div.footer-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+            "atendimento institucional servicos"
+            ;
+        }
+        footer .atendimento{
+            grid-area: atendimento;
+        }
+        footer .link-container{
+            grid-area: institucional;
+        }
+        footer .servicos-container{
+            grid-area: servicos;
+        }
+        footer div.servicos-container div.servico a{
+            display: block;
+        }
+        .formas-pagamento .fileira2, .fileira1{
+            display: inline;
+        }
+
+        navbar nav.desktop{
+            display: flex;
+        }
+        navbar nav.desktop ul{
+            display: inline-flex;
+        }
+        navbar nav.desktop li{
+            font-size: 1rem;
+        }
+}
