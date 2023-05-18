@@ -1,3 +1,3 @@
-﻿# gbrPiazer.github.io
+﻿## Teste de front-end e-commerce
 
-Project Basic Front End
+Projeto básico de front-end para processo seletivo.
